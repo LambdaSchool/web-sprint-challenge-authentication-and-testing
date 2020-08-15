@@ -25,12 +25,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+    - sessions - stored in cookies on the users browser which is then compared by the server against the session info
+    - tokens: secret is used to create jwt to the client which is added to header in every request. server validates the token within every request 
 
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+    - hashes passwords to store encrypted passwords
 
 3. How are unit tests different from integration and end-to-end testing.
+    unit tests hav salts to prevent rainbow table attacks
 
 4. How _Test Driven Development_ changes the way we write applications and tests.
+    - focus on tests first which is supposed to help us write better code since we will know what will cause the test to fail
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -49,8 +54,8 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
+- [x] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+- [x] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
 - [ ] Configuration for running tests using `Jest`.
 - [ ] A **minimum o 2 tests** per API endpoint.
 
