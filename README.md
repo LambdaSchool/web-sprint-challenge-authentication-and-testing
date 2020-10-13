@@ -26,11 +26,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+    Session cookies are stored IN the server's memory, it uses a lot more resources than JSON web tokens, which are stateless.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+    Bcrypt "salts" and "hashes" passwords, which essentially reduces the number of passwords-by-second an attacker could "hash". 
 
 3. How are unit tests different from integration and end-to-end testing.
 
+    End-to-end tests test all layers of the application at once and require external components (i.e. a database or messaging queue), while unit tests single bits of source code like functions/calculations.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+    TDD changes the way we write applications and tests by letting you write your test code before your functional code, rather than start with functional code and then proceed to test code (if you do at all).
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -49,10 +57,10 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
-- [ ] Configuration for running tests using `Jest`.
-- [ ] A **minimum o 2 tests** per API endpoint.
+- [X] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+- [X] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
+- [X] Configuration for running tests using `Jest`.
+- [X] A **minimum o 2 tests** per API endpoint.
 
 **Note**: the database already has the users table, but if you run into issues, the migrations are available.
 
